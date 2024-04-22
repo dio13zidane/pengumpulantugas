@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Space Club-about</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(17, 35, 105, 0.7), rgba(4, 9, 30, 0.7)), url(image/backgroundprofil.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            width: 100%;
+            height: 60vh;
+        }
+
+        .product .product-card {
+            z-index: 1;
+            background: #1D212B;
+            position: relative;
+            width: 300px;
+            height: 400px;
+            margin: 40px;
+            border-radius: 10px;
+
+        }
+
+        .product .product-card:before {
+            content: '';
+            background: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .product .product-card .product-img {
+            z-index: 1;
+            position: absolute;
+            max-width: 270px;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .product .product-card .name {
+            z-index: 2;
+            color: #fff;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: 110px;
+            font-size: 20px;
+            font-family: "Poppins", sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .product .product-card .npm {
+            z-index: 2;
+            color: #fff;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: 80px;
+            font-size: 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+        }
+
+        .product .product-card .popup-btn {
+            z-index: 2;
+            color: #fff;
+            background: #555;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .product .popup-view {
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.5);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+
+        }
+
+        .product .popup-view.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .product .popup-view.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .product .popup-card {
+            position: relative;
+            display: flex;
+            width: 700px;
+            height: 400px;
+            margin: 20px;
+
+        }
+
+        .product .popup-card .close-btn.active {
+            z-index: 4;
+        }
+
+
+        .product .popup-card .product-img {
+            z-index: 2;
+            background: #1D212B;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35%;
+            height: 90%;
+            transform: translateY(25px);
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+        }
+
+        .product .popup-card .product-img img {
+            z-index: 2;
+            position: relative;
+            width: 300px;
+            left: -30px;
+        }
+
+        .product .popup-card .info {
+            z-index: 2;
+            background-color: #fff;
+            width: 70%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 40px;
+            border-radius: 10px;
+
+        }
+
+        .product .popup-card .info .icon a {
+            color: rgb(9, 6, 75);
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .product .popup-card .close-btn {
+            color: #555;
+            z-index: 3;
+            position: absolute;
+            right: 0;
+            font-size: 20px;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        
+    </style>
+
+
+</head>
+
+<body>
+  
+
+    <section class="header">
+
+
+        <div class="container">
+            <div class="product">
+                <div class="product-card">
+                    <h2 class="name">Dio Abiyyu Zidane Ginting</h2>
+                    <span class="npm">23451039</span>
+                    <a class="popup-btn">View Detail</a>
+                    <img src="image/dioprofil.png" class="product-img" alt="">
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <a><i class="fas fa-times close-btn"></i></a>
+                        <div class="product-img">
+                            <img src="image/dioprofil.png" alt="">
+                        </div>
+                        <div class="info">
+                            <h2>Dio Abiyyu Zidane Ginting</h2>
+                            <h3>23451039 - Teknik Informatika (A) </h3><br><br>
+                            <p>"Life is like a game.<br>Sometimes you lose, sometimes you win.<br>So don't give
+                                up.<br>Fighting!"</p><br>
+                            <div class="icon">
+                                <a href="https://api.whatsapp.com/send/?phone=6289522177567&text&type=phone_number&app_absent=0"
+                                    target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                                <a href="https://www.instagram.com/my_nameis_dio?igsh=MWl2aHlwM216OXp2Mg=="
+                                    target="_blank"><i class='bx bxl-instagram'></i></a>
+                                <a href="https://t.me/jenoxcl" target="_blank"><i class='bx bxl-telegram'></i></a>
+                                <a href="https://dio13abiyyu.blogspot.com/" target="_blank"><i
+                                        class='bx bxl-blogger'></i></i></a>
+                                <a href="mailto: dioabiyyu30@gmail.com" target="_blank"><i
+                                        class='bx bxl-gmail'></i></i></a>
+                                 
+                            </div>
+                            <br><i class='bx bxs-envelope'></i> : dio13abiyyu@gmail.com
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-card">
+                    <h2 class="name">Akmal Eka Evandi</h2>
+                    <span class="npm">23451006</span>
+                    <a class="popup-btn">View Detail</a>
+                    <img src="image/akmalprofil.png" class="product-img" alt="">
+                </div>
+                <div class="popup-view">
+                    <div class="popup-card">
+                        <a><i class="fas fa-times close-btn"></i></a>
+                        <div class="product-img">
+                            <img src="image/akmalprofil.png" alt="">
+                        </div>
+                        <div class="info">
+                            <h2>Akmal Eka Evandi</h2>
+                            <h3>23451006 - Teknik Informatika (A) </h3><br><br>
+                            <p>"Life is like riding a bicycle.<br>To keep your balance, you must keep moving"</p><br>
+                            <div class="icon">
+                                <a href="https://api.whatsapp.com/send/?phone=6283197891746&text&type=phone_number&app_absent=0"
+                                    target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                                <a href="https://www.instagram.com/akmalekaevandi?igsh=MTRkY240ZzgwYmM0bg=="
+                                    target="_blank"><i class='bx bxl-instagram'></i></a>
+                                <a href="https://t.me/akmalekaevandi" target="_blank"><i
+                                        class='bx bxl-telegram'></i></a>
+
+                            </div>
+                            <br><i class='bx bxs-envelope'></i> : akmalekaevandi@gmail.com
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+    <!-- JavaScript for Toggle Menu -->
+    <script type="text/javascript">
+        var popupViews = document.querySelectorAll('.popup-view');
+        var popupBtns = document.querySelectorAll('.popup-btn');
+        var closeBtns = document.querySelectorAll('.close-btn');
+
+        var popup = function (popupClick) {
+            popupViews[popupClick].classList.add('active');
+        }
+
+        popupBtns.forEach((popupBtn, i) => {
+            popupBtn.addEventListener("click", () => {
+                popup(i);
+            });
+        });
+
+
+        closeBtns.forEach((closeBtn) => {
+            closeBtn.addEventListener("click", () => {
+                popupViews.forEach((popupView) => {
+                    popupView.classList.remove('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
